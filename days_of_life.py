@@ -1,12 +1,12 @@
 
-years = input("Введите количество лет: ")
-
 while True:
+    years = input("Введите количество лет: ")
     try:
         years = int(years)
+        print("понял")
         break
     except ValueError:
-        years = input("Введите количество лет ЧИСЛОМ пожалуйста: ")
+        print("непонял")
 
 days = years * 365
 
