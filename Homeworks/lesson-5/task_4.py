@@ -3,7 +3,7 @@
 True/False — цена меньше порога. Посчитайте, сколько цен ниже порога (sum(flags)), и выведите среднюю цену только по
 «доступным» позициям.
 """
-
+# список цен
 prices = [146.99, 1499, 2599, 79.99, 10200, 3550]
 print(prices)
 filter = float(input("Порог: "))
@@ -14,9 +14,9 @@ print(analised_prices)
 quantity = sum(analised_prices)
 print(f"Количество доступных позиций: {quantity}")
 
-summ = 0
-for i in range(len(prices)):
-    if analised_prices[i]:
-        summ += prices[i]
+summ = sum([prices[i] for i in range(len(prices)) if analised_prices[i]])
+# for i in range(len(prices)):
+#     if analised_prices[i]:
+#         summ += prices[i]
 
 print(f"Средняя цена: {summ/quantity}")

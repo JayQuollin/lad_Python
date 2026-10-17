@@ -8,8 +8,8 @@ groups = [
     "ДДТ",
     "Дайте танк!",
     "[AMATORY]",
-    "Алиса",
-    "Сплин",
+    "алиса",
+    "сплин",
     "Король и шут",
     "Nautilus Pompilius",
     "7Раса",
@@ -24,5 +24,8 @@ print("A) Группы, длиннее 5: ", more_then_five)
 lens_list = [len(name) for name in groups]
 print("Б) Длины: ", lens_list)
 
+capital_start = [name.capitalize() for name in groups]
+print("В) Строки с Большой Буквы:", capital_start)
+
 norm_start = [name for name in groups if name[0].isalpha() and name[0] == name[0].capitalize()]
-print("В) Строки с нормальным началом:", norm_start)
+print("Г*) Строки с нормальным началом:", norm_start)
