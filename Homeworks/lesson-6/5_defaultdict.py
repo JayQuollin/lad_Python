@@ -41,3 +41,4 @@ for name, grads in result.items():
     for grade in grads:
         summ += int(grade[1])
     print(f"{name}: {summ / len(grads)}")
+
