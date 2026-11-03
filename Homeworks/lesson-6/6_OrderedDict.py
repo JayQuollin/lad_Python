@@ -6,3 +6,22 @@ collections.OrderedDict по официальной документации
 (https://docs.python.org/3/library/collections.html#collections.OrderedDict) и коротко опишите в комментарии кода: что
 это такое, зачем он нужен и чем отличается от обычного dict в современном Python (начиная с 3.7).
 """
+
+
+def setteriser(data: list) -> list:
+    new_data = []
+    for letter in data:
+        if letter not in new_data:
+            new_data.append(letter)
+    return new_data
+
+this_data = list("пап привет как дела нормально как в школе")
+
+print(setteriser(this_data))
+print(set(this_data))
+print(setteriser(this_data) == set(this_data))
+
+# OrderedDict - это словарь, которому важно на каких местах какие элементы стоят.
+# Он запоминает порядок добавления и имеет функционал, позволяющий этот порядок менять.
+# Начиная с Python 3.7 обычный dict тоже сохраняет порядок, однако OrderedDict всё еще лучше приспособлен к работе
+# над управлением порядка, но за это он платит производительностью при работе с данными в режиме обычного словаря.
